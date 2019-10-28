@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Quiz App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  #timeStamp {
+    display:inline-block;
+    font-size: 13px;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- ALWAYS USE 1120 x 700 IMAGE SIZE FILES -->
+  <!-- Navbar -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="homePage.html">Home Page</a></li>
+    <li><a href="classLessons.html">Class Lessons</a></li>
+    <li><a href="vocabulary.html">Vocabulary</a></li>
+    <li><a href="quizzes.html">Quizzes</a></li>
+    <li><a href="#!">Settings</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Log Out</a></li>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light blue-text">Store</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a class="dropdown-button blue-text" href="#!" data-activates="dropdown1">Menu<i class="blue-text medium material-icons left">menu</i></a>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><div class="userView">
+          <div class="background">
+            <img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="http://www.w3schools.com/w3css/img_avatar3.png"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <a class="subheader">Menu</a>
+        <div class="divider"></div>
+        <li><a href="homePage.html" class="light waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">web</i>Home Page</a></li>
+        <li><a href="classLessons.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">description</i>Class Lessons</a></li>
+        <li><a href="vocabulary.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">spellcheck</i>Vocabulary</a></li>
+        <li><a href="quizzes.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">question_answer</i>Quizzes</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">settings</i>Settings</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">input</i>Log Out</a></li>
+      </ul>
+      <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Parallax Starts -->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div id="content" class="center">
+          <h1 class="center white-text"><i class="large material-icons">store</i></h1>
+          <h2 class="white-text" style="">Store</h2>
+          <h5 class="light white-text">Students are able to buy certain items using their points earned.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg" alt="Image 1"></div>
+  </div>
+  <!-- Parallax Ends -->
+  <!-- Main  Div -->
+  <div class="container">
+    <div class="section">
+      <h5 class="light">Store</h5>
+      <p><i>Press a card to open up the menu!</i></p>
+      <div class="row">
+        <!-- Store Cards -->
+        <div class="col s12 m6 l3" id="store_Card">
+          <div class="card waves-effect waves-block">
+            <div class="card-content center">
+              <span id="store_Card_Title"class="card-title" style="font-size: 22px;">Homework Pass</span>
+              <center>
+                <img src="ChemistryIcon.png" alt="Smiley face" height="100" width="100">
+              </center>
+              <span id="store_Card_Price" style="font-size: 16px;">100 Points</span>
+            </div>
+          </div>
+        </div>
+        <!-- Break -->
+      </div>
+    </div>
+  </div>
+  <!-- Modals -->
+  <!-- Modal Structure -->
+  <div id="store_Card_Modal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="js/javascript.js"></script>
+  <script src="studentStore.js"></script>
+</body>
+
+</html>

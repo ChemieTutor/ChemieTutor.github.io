@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Lost Items Page</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style type="text/css">
+    body {
+  background: url('http://more-sky.com/data/out/9/IMG_321985.png');
+  /*background: url('http://hdwallpapershdpics.com/wp-content/uploads/2016/09/best-hd-wallpapers.jpg');*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+    #userimg {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    #content {
+      margin: auto;
+      width: 50%;
+      background-position: center center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li>
+          <a href="">Menu</a>
+          <a href="index.html">Main Page</a>
+          <a href="userPage.html">Home Page</a>
+          <a href="lost.html">Lost Items</a>
+          <a href="found.html">Found Items</a>
+          <a href="write.html">Post Items</a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- NavBarDone -->
+  <!-- Main  Div -->
+  <br><br>
+  <div id="content" class="center">
+    <h2 id="user" class="header col white-text" style="text-shadow:5px 5px 5px black;">Lost Item</h2>
+  </div>
+  <div class="center">
+    <h4 class="white-text">Lost an item in your classroom?</h4>
+    <h5 class="light white-text">Scroll through the following to search for your lost item(s)!</h5>
+  </div>
+  <div class="container">
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img id="cardImage" class="activator" src="http://www.i-lost-it.co.uk/images/iS_lost.jpg">
+      </div>
+      <div class="card-content">
+        <span id="cardTitle" class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <div class="right">
+          <div class="chip">Tag #1</div>
+          <div class="chip red white-text">Unclaimed</div>
+          <div class="chip green white-text">Claimed</div>
+        </div>
+        <p>Description</p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
+         <div class="right">
+          <div class="chip">Tag #1</div>
+          <div class="chip red white-text">Unclaimed</div>
+          <div class="chip green white-text">Claimed</div>
+        </div> 
+        </span>
+        <p>Currently located in: Room 111</p>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+
+        <a id="imageButton" class="waves-effect waves-light btn">view image</a>
+        <p style="font-size: 14px;">Posted by <i>jdalvarez1</i> on 01/23/16 at 12:25:00 PM</p>
+      </div>
+    </div>
+    <!-- Other Card -->
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img id="cardImage" class="activator" src="http://www.allenedmonds.com/on/demandware.static/-/Library-Sites-AllenEdmondsShared/default/dwec88ada2/images/customPages/model-shoe.png">
+      </div>
+      <div class="card-content">
+        <span id="cardTitle" class="card-title activator grey-text text-darken-4">Shoe<i class="material-icons right">more_vert</i></span>
+        <div class="right">
+          <div class="chip">Clothing</div>
+          <div class="chip">Footwear</div>
+          <div class="chip">Shoes</div>
+          <div class="chip red white-text">Unclaimed</div>
+        </div>
+        <p>I found a shoe in Mr. Haye's room. I am not sure who owns it. If this is somehow yours, please email me!</p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Shoe<i class="material-icons right">close</i>
+         <div class="right">
+           <div class="chip">Clothing</div>
+          <div class="chip">Footwear</div>
+          <div class="chip">Shoes</div>
+          <div class="chip red white-text">Unclaimed</div>
+        </div> 
+        </span>
+        <p>Currently located in: Room 124</p>
+        <p>I found a shoe in Mr. Haye's room. I am not sure who owns it. If this is somehow yours, please email me!</p>
+        <p style="font-size: 14px;">Posted by <i>jdalvarez1</i> on 01/23/16 at 12:25:00 PM</p>
+        <!-- Button does not work for this one, why? -->
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+  <!-- Image Modal -->
+  <div id="myModal" class="imageModal">
+    <span class="close">&times;</span>
+    <img class="imageModal-content" id="img1">
+  </div>
+  <!-- Image Modal End -->
+
+  <!-- Modals End -->
+  <!-- This is the end of the main div-->
+  <!-- Beginning of Footer -->
+
+  <!-- End of Footer -->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="js/javascript.js"></script>
+</body>
+
+</html>

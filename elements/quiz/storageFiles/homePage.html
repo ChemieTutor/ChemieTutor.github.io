@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Quiz App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  #userimg {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  </style>
+</head>
+
+<body>
+  <!-- ALWAYS USE 1120 x 700 IMAGE SIZE FILES -->
+  <!-- Navbar -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="homePage.html">Home Page</a></li>
+    <li><a href="classLessons.html">Class Lessons</a></li>
+    <li><a href="vocabulary.html">Vocabulary</a></li>
+    <li><a href="quizzes.html">Quizzes</a></li>
+    <li><a href="#!">Settings</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Log Out</a></li>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light blue-text">Home Page</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a class="dropdown-button blue-text" href="#!" data-activates="dropdown1">Menu<i class="blue-text medium material-icons left">menu</i></a>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><div class="userView">
+          <div class="background">
+            <img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="http://www.w3schools.com/w3css/img_avatar3.png"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <a class="subheader">Menu</a>
+        <div class="divider"></div>
+        <li><a href="homePage.html" class="light waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">web</i>Home Page</a></li>
+        <li><a href="classLessons.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">description</i>Class Lessons</a></li>
+        <li><a href="vocabulary.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">spellcheck</i>Vocabulary</a></li>
+        <li><a href="quizzes.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">question_answer</i>Quizzes</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">settings</i>Settings</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">input</i>Log Out</a></li>
+      </ul>
+      <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Main  Div -->
+  <!-- Parallax -->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div id="content" class="center">
+          <img id="userimg" src="http://www.w3schools.com/w3css/img_avatar3.png">
+          <h2 id="user" class="header col white-text" style="text-shadow:5px 5px 5px black;">Welcome, username!</h2>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg" alt="Image 1"></div>
+  </div>
+  <!-- Parallax Closes -->
+  <div class="container">
+    <div id="loader_section" class="section">
+      <div class="col s12 m12">
+        <label for="progress">Loading...</label>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="1" style="display: none;">
+      <h5 class="light">News Feed</h5>
+      <div class="col s12 m12" id="pinned_announcements">
+        <span id="p_announce">Pinned Announcements:</span>
+        <ul class="collection" id="pinned_card" style="display: none;">
+          <li class="collection-item avatar">
+            <img src="http://www.w3schools.com/w3css/img_avatar3.png" alt="" class="circle">
+            <span class="title">System Notification</span>
+            <p class="light" id="subject">Pinned Announcement</p>
+            <p class="light" id="message">Happy Birthday, <b>John Doe</b>!</p>
+            <a href="#!" class="secondary-content"><i id="logo" class="red-text material-icons">new_releases</i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="section" id="2" style="display: none;">
+        <div id="most_recent_announcements">
+          <span id="announce">Announcements:</span>
+          <ul class="collection" id="announcement_card" style="display: none;">
+            <li class="collection-item avatar">
+              <img src="http://www.w3schools.com/w3css/img_avatar3.png" alt="" class="circle">
+              <span class="title">Teacher Name</span>
+              <p class="light" id="subject">Pinned Announcement</p>
+              <p class="light" id="message">Happy Birthday, <b>John Doe</b>!</p>
+              <a href="#!" class="secondary-content"><i id="logo" class="material-icons">message</i></a>
+            </li>
+          </ul>
+        </div>
+        <div id="older_announcements" style="display: none;">
+          <span id="old_announce">Older Announcements:</span>
+          <!-- DATA GOES HERE -->
+        </div>
+      </div>
+      <u><center><a id="showMore">Show more</a></center><u>
+      <u><center><a id="showLess" style="display: none;">Show less</a></center><u>
+      </div>
+      <div class="section">
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-text"><i class="material-icons">description</i></h2>
+              <h5 class="center">Class Lessons</h5>
+              <p class="light">Teachers are able to post daily class lessons through our <b>Class Lessons</b> section. Students can find class notes and lessons below.</p>
+            </div>
+            <center><a href="classLessons.html" class="btn waves-effect blue">Lessons</a></center>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-text"><i class="material-icons">spellcheck</i></h2>
+              <h5 class="center">Vocabulary</h5>
+              <p class="light">Teachers can create a list of vocabulary through our <b>Vocabulary</b> section. Students can find the entire list of vocabulary below.</p>
+            </div>
+            <center><a href="vocabulary.html" class="btn waves-effect blue">Vocabulary</a></center>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center blue-text"><i class="material-icons">question_answer</i></h2>
+              <h5 class="center">Quizzes</h5>
+              <p class="light">Students are able to take different quizzes to test their knowledge on the subject through our <b>Quiz</b> section. These practice quizzes were created to be interactive and to allow students to quiz themselves before the real tests and quizzes.</p>
+            </div>
+            <center><a href="quizzes.html" class="btn waves-effect blue">Quizzes</a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="admin">
+      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a href="#add_Announcement" class="btn-floating btn-large waves-effect waves-light blue tooltipped" data-position="left" data-delay="50" data-tooltip="Only Admins will have access to this!"><i class="material-icons">add</i></a>
+      </div>
+    </div>
+    <!-- Modals Below -->
+    <div id="add_Announcement" class="modal" style="opacity: 0.5;">
+      <div class="modal-content">
+        <h4 class="center">Create Announcement</h4>
+        <div class="row">
+          <blockquote id="announcementErrorDisplay" style="display: none;">
+            This is an example quotation that uses the blockquote tag
+          </blockquote>
+          <form class="col s12">
+            <div class="input-field col s12">
+              <!-- Disable this -->
+              <input id="announcement_user" type="text">
+              <label for="announcement_user">Username</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="announcement_subject" type="text" length="15">
+              <label for="announcement_subject">Subject</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="announcement_message" class="materialize-textarea"></textarea>
+              <label for="announcement_message">Message</label>
+            </div>
+            <div class="col s12">
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">Pin Announcement (Note: Pin announcements will be displayed before other announcements)</label>
+              </p>
+              <br>
+            </div>
+          </form>
+          <div class="center">
+            <a id="write_Announcement" class="modal-action modal-close btn waves-effect blue lighten-1">Post Announcement</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Scripts-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCP4QgmVwNhL7H9YkpXosSjgjRhw3GyaLA",
+      authDomain: "qadata-6c30d.firebaseapp.com",
+      databaseURL: "https://qadata-6c30d.firebaseio.com",
+      storageBucket: "qadata-6c30d.appspot.com",
+      messagingSenderId: "591410256857"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/materialize.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+    <script src="js/javascript.js"></script>
+    <script src="homePage.js"></script>
+  </body>
+
+  </html>

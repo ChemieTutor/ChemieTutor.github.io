@@ -1,0 +1,503 @@
+sub, sup{
+line-height: 50%;
+font-size: 12px;
+background-color:transparent;
+}
+
+
+
+/* redefine subtitle as found on main.css */
+#subtitle{
+font-family: arial, sans-serif;
+font-size: 28px;
+text-align: center;
+margin: 20px 0 0;
+}
+
+
+/* isotope/main data link */
+.otherdata, .otherdata a{
+margin: 0 0 20px;
+text-align: center;
+font-family: arial, sans-serif;
+font-size: 12px;
+font-weight: normal;
+text-decoration: none;
+}
+
+
+
+/* 'new' old navigation bar */
+
+#elementnav{
+position: relative;
+top: 0; left: 0;
+padding: 0 0 15px 0;
+margin: 15px 0 0 0;
+font-family: arial, sans-serif;
+font-size: 18px;
+}
+
+#elementnav a{
+text-decoration: none;
+}
+
+#elementnav a:link, #elementnav a:visited{
+color: #000;
+}
+
+#elementnav a:hover, #elementnav a:visited:hover{
+color: #66F;
+}
+
+#larr{
+position: absolute;
+top: 0; left: 0;
+margin: 0 0 0 80px;
+}
+
+#previous{
+position: absolute;
+top: 0; left: 0;
+margin: 0 0 0 115px;
+text-align: center;
+}
+
+#previousele{
+position: absolute;
+top: 0; left: 0;
+margin: 22px 0 0 43px;
+text-align: center;
+width: 270px;
+font-size: 12px;
+}
+
+#toe{
+text-align: center;
+}
+
+#next{
+position: absolute;
+top: 0; right: 0;
+margin: 0 115px 0 0;
+text-align: center;
+}
+
+#nextele{
+position: absolute;
+top: 0; right: 0;
+margin: 22px 27px 0 0;
+text-align: center;
+width: 270px;
+font-size: 12px;
+}
+
+#rarr{
+position: absolute;
+top: 0; right: 0;
+margin: 0 80px 0 0;
+}
+
+.navname, .navname a{
+font-size: 12px;
+}
+
+
+
+
+/*p.history{
+line-height: 120%;
+margin: 10px;
+text-indent: 10px;
+font-size: 14px;
+text-align: left;
+}*/
+
+p.hd, p.hd2{
+margin: 10px;
+font-weight: bold;
+text-indent: 10px;
+font-size: 18px;
+text-align: left;
+}
+
+p.hd2{
+margin: 10px 30px 5px;
+text-indent: 0;
+}
+
+p.source{
+margin: 5px 0 15px 50px;
+font-size: 16px;
+text-align: left;
+line-height: 130%;
+}
+
+p.title{
+margin: 10px 0 0;
+font-size: 22px;
+text-align: center;
+}
+
+/*p.img{
+margin: 0;
+text-align: center;
+}*/
+
+.nav{
+font-size: 12px;
+}
+
+.idxhd{
+font-size: 20px;
+padding: 15px 0 0;
+}
+
+.lst{
+font-family: arial, sans-serif;
+font-size: 16px;
+}
+
+.txtan{
+font-family: arial, sans-serif;
+font-size: 12px;
+padding: 0 0 0 3px;
+text-decoration: none;
+}
+
+.txtcs{
+font-family: arial, sans-serif;
+font-size: 16px;
+text-decoration: none;
+}
+
+.b1{
+border-width: 1px;
+border-style: solid;
+border-color: black;
+}
+
+.bgnav{
+font-size: 18px;
+}
+
+.bxatnm{
+font-size: 24px;
+}
+
+.bxcs{
+font-size: 36px;
+}
+
+.bxcn, .bxatwt{
+font-size: 24px;
+}
+
+.datnm{
+font-weight: bold;
+font-size: 28px;
+}
+
+.dathd{
+font-size:14px;
+font-weight: bold;
+}
+
+.dattxt{
+font-size:16 px;
+}
+
+.smalltxt{
+font-size:12px;
+}
+
+.alert{
+font-size: 14px;
+font-weight: bold;
+color: red;
+}
+
+.red{
+color: red;
+}
+
+.tabletitle{
+font-size:18px;
+font-weight: bold;
+text-align: center;
+margin: 30px 0 20px;
+}
+
+.coltitle{
+font-size:16px;
+padding: 5px 20px 10px;
+font-weight: bold;
+text-align: center;
+}
+
+.isodat{
+font-size:16px;
+text-align: center;
+vertical-align: top;
+}
+
+.isosup{
+font-size:12px;
+}
+
+.return{
+font-size: 14px;
+text-align: center;
+}
+
+p.indextxt{
+font-size: 14px;
+text-indent: 10px;
+text-align: left;
+margin: 20px 10px 10px 10px;
+}
+
+p.indexlist{
+font-size: 16px;
+text-indent: 0;
+text-align: left;
+margin: 3px 25px 4px 60px;
+}
+
+td.indextable{
+font-size: 16px;
+padding: 3px 20px 3px 20px;
+text-indent: 0;
+text-align: left;
+}
+
+
+/* new temporary code to style main element data pages */
+
+#uppercontainer{
+position: relative;
+top: 0; left: 0;
+height: 220px;
+}
+
+
+#solidbox, #liquidbox, #gasbox, #unknownbox{
+width: 210px;
+height: 210px;
+background-color: #9f9;
+border-width: 2px;
+border-style: solid;
+border-color: black;
+position: relative;
+top: 0; left: 30px;
+}
+
+#liquidbox{
+background-color: #9ff;
+}
+
+#gasbox{
+background-color: #ff9;
+}
+
+#unknownbox{
+background-color: #fc9;
+}
+
+#boxatomicnumber{
+position: absolute;
+top: 5px; left: 10px;
+font-size: 28px;
+}
+
+#boxchemicalsymbol{
+position: absolute;
+top: 40px; left: 0;
+font-size: 48px;
+text-align: center;
+font-weight: bold;
+width: 210px;
+}
+
+
+#boxelementname{
+position: absolute;
+top: 110px; left: 0;
+font-size: 32px;
+text-align: center;
+width: 210px;
+}
+
+
+#boxatomicmass{
+position: absolute;
+bottom: 5px; left: 0;
+font-size: 28px;
+text-align: center;
+width: 210px;
+}
+
+
+#maindatabox{
+position: absolute;
+top: 2px; left: 280px;
+}
+
+#maindatabox p{
+margin: 0 0 5px;
+}
+
+
+p.history{
+line-height: 130%;
+margin: 12px 40px 12px 60px;
+text-indent: 12px;
+font-size: 16px;
+}
+
+p.historyvideo{
+text-indent: 0;
+margin: 25px auto;
+text-align: center;
+}
+
+.smaller{
+font-size: smaller;
+}
+
+p.electronshelltitle{
+font-size: 16px;
+margin: 0;
+padding: 0 0 0 42px;
+}
+
+p.electronshellunconfirmed{
+font-size: 16px;
+text-indent: 0;
+text-align: left;
+padding: 0;
+margin: -10px 0 0 95px;
+}
+
+
+/* late 2012 electron config */
+
+div#configout{
+font-size: 16px;
+position: relative;
+top: 0; left: 0;
+margin: 0;
+padding: 0;
+}
+
+div#configleft{
+position: absolute;
+top: -13px; left: 0;
+margin: 0;
+padding: 0;
+width: 280px;
+}
+
+div#configright{
+position: relative;
+top: 0; left: 250px;
+margin: 0;
+padding: 0;
+width: 500px;
+}
+
+div#configright p{
+text-indent: 0;
+text-align: left;
+padding: 0;
+margin: 0 0 5px;
+}
+/* late 2012 isotope table definitions */
+
+p.tbltitle{
+font-size:18px;
+font-weight: bold;
+text-align: center;
+margin: 30px 0 20px;
+}
+
+p.noiso{
+font-size:18px;
+text-align: center;
+margin: -10px 0 20px;
+}
+
+table.isotope{
+border-collapse:collapse;
+border: 0;
+margin: 10px auto 20px;
+}
+
+table.isotope td{
+text-align: center;
+vertical-align: top;
+padding: 5px 15px;
+}
+
+table.isotope td.hd{
+font-weight: bold;
+padding: 0 20px 0;
+}
+
+table.isotope td.nat{
+padding-top: 10px;
+}
+
+table.isotope td.new{
+padding-top: 15px;
+}
+
+/* late 2012 index page table floats */
+
+div#clear{
+position: relative;
+top: 0; left: 0;
+width: 740px;
+padding: 0;
+margin: 0 auto;
+font-family: arial, sans-serif;
+font-size: 16px;
+}
+
+div#clear table{
+padding: 0;
+margin: 0 0 30px;
+width: 200px;
+}
+
+div#clear td{
+padding: 5px 0 0;
+margin: 0;
+}
+
+table#t1{
+position: relative;
+top: 0; left: 0;
+}
+
+table#t2{
+position: absolute;
+top: 0; left: 270px;
+}
+
+table#t3{
+position: absolute;
+top: 0; left: 540px;
+}
+
+/* late 2012 links in tables */
+
+table.links{
+padding: 0;
+margin: 10px auto;
+}
+
+table.links td{
+padding: 3px 25px;
+margin: 0;
+}

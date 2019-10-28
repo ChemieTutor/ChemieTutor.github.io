@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>User Page</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style type="text/css">
+    body {
+      background: url('http://more-sky.com/data/out/9/IMG_321985.png');
+      /*background: url('http://hdwallpapershdpics.com/wp-content/uploads/2016/09/best-hd-wallpapers.jpg');*/
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    #userimg {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    #content {
+      margin: auto;
+      width: 50%;
+      background-position: center center;
+    }
+    
+    .chips.focus {
+      border-bottom: 1px solid #26a69a;
+      box-shadow: 0 1px 0 0 #26a69a;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li>
+          <a href="">Menu</a>
+          <a href="index.html">Main Page</a>
+          <a href="userPage.html">Home Page</a>
+          <a href="lost.html">Lost Items</a>
+          <a href="found.html">Found Items</a>
+          <a href="write.html">Post Items</a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- NavBarDone -->
+  <!-- Main  Div -->
+  <br><br>
+  <div class="center">
+    <h4 class="white-text">Help someone reach their lost items!</h4>
+    <h5 class="light white-text">Use the following form to create a card that lets someone know where their lost item(s) are!</h5>
+  </div>
+  <div class="container">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 white-text">
+            <input id="card_title" type="text" length="15">
+            <label for="card_title" class="white-text">Title</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 white-text">
+            <textarea id="textarea1" class="materialize-textarea" length="120"></textarea>
+            <label for="textarea1" class="white-text">Description</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 white-text">
+            <div id="chipAdder" class="chips"></div>
+            <label for="chipAdder" class="white-text" style="font-size: 14px;">Tags</label>
+          </div>
+        </div>
+        <div class="row">
+         <p class="white-text">Are you currently in possesion of the item?</p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="test3" />
+            <label for="test3" class="white-text">Yes</label>
+            <input class="with-gap" name="group1" type="radio" id="test4" />
+            <label for="test4" class="white-text">No</label>
+          </p>
+        </div>
+         <div class="row">
+          <div class="input-field col s12 white-text">
+            <input id="card_title" type="text" length="12">
+            <label for="card_title" class="white-text">Item location</label>
+          </div>
+        </div>
+        <div class="row">
+          <p class="white-text">Picture of Lost Object(s)</p>
+          <div class="file-field input-field">
+            <div class="waves-effect waves-light btn">
+              <span>File</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </div>
+      </form>
+      <center><a href="" class="waves-effect waves-light btn" type="submit" name="action">Submit<i class="material-icons right">send</i></a></center>
+      <br>
+      <center><a href="index.html" class="waves-effect waves-light btn">back to main page</a></center>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <!-- Modals End -->
+  <!-- This is the end of the main div-->
+  <!-- Beginning of Footer -->
+
+  <!-- End of Footer -->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="js/javascript.js"></script>
+</body>
+
+</html>

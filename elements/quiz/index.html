@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Quiz App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  .btnw {
+    width: 100%;
+  }
+  .answer {
+    left: 0px;
+    width: 50%;
+  }
+  #question_section {
+    display: none;
+  }
+
+  #loader_Section_InitialPage {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    -webkit-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%);
+  }
+
+  #lightbox {
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+  }
+  .no-transform {
+    text-transform: none;
+  }
+
+#answer1, #answer2, #answer3, #answer4 {
+  left: -400px;
+}
+
+.animation {
+  --webkit-animation-timing-function: ease;
+  -webkit-animation-name: buttonAnimation;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: buttonAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes buttonAnimation {
+  0%  {left: -400px;}
+  50% {left: 0px;}
+  100 {left: 400px;};
+}
+@keyframes buttonAnimation {
+  0% {left: -400px;}
+  50% {left: 0px;}
+  100% {left: 400px;}
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- ALWAYS USE 1120 x 700 IMAGE SIZE FILES -->
+  <!-- Navbar -->
+  <!--
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="homePage.html">Home Page</a></li>
+  <li><a href="classLessons.html">Class Lessons</a></li>
+  <li><a href="vocabulary.html">Vocabulary</a></li>
+  <li><a href="quizzes.html">Quizzes</a></li>
+  <li><a href="#!">Settings</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Log Out</a></li>
+</ul>-->
+<div id="initialPage" style="display: block;">
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light white-text">Ion Blaster</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <!--
+      <ul id="nav-mobile" class="side-nav">
+      <li><div class="userView">
+      <div class="background">
+      <img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg">
+    </div>
+    <a href="#!user"><img class="circle" src="http://www.w3schools.com/w3css/img_avatar3.png"></a>
+    <a href="#!name"><span class="white-text name">John Doe</span></a>
+    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+  </div></li>
+  <a class="subheader">Menu</a>
+  <div class="divider"></div>
+  <li><a href="homePage.html" class="light waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">web</i>Home Page</a></li>
+  <li><a href="classLessons.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">description</i>Class Lessons</a></li>
+  <li><a href="vocabulary.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">spellcheck</i>Vocabulary</a></li>
+  <li><a href="quizzes.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">question_answer</i>Quizzes</a></li>
+  <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">settings</i>Settings</a></li>
+  <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">input</i>Log Out</a></li>
+</ul>
+<a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+</div>
+-->
+</div>
+</nav>
+<!-- End of Navbar -->
+<!-- Parallax Starts -->
+<!--
+<div id="index-banner" class="parallax-container">
+<div class="section no-pad-bot">
+<div class="container">
+<br><br>
+<div id="content" class="center">
+<h1 class="center white-text"><i class="large material-icons">question_answer</i></h1>
+<h2 class="white-text" style="">Quiz</h2>
+<h5 class="light white-text">Below is a variety of quizzes you can take to gain knowledge, or to practice your knowledge!</h5>
+</div>
+</div>
+</div>
+<div class="parallax"><img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg" alt="Image 1"></div>
+</div>
+-->
+<!-- Parallax Ends -->
+<!-- Main  Div -->
+<div class="container">
+  <div>
+    <br><br>
+    <div class="card">
+      <br>
+      <h4 class="header center blue-text">Ion Quiz</h3>
+        <center>
+          <img src="ChemistryIcon.png" alt="Chemistry Logo" height="100" width="100">
+        </center>
+      </div>
+    </div>
+    <div class="section" id="loader_Section_InitialPage">
+      <div id="loader_Section_Circular" class="preloader-wrapper small active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="btn_Section" style="display: none;">
+      <h5 class="light">Select preferred ions to quiz on.</h5>
+      <br>
+      <button id="monatomicTopicBtn" class="btn btnw waves-effect btn-large blue white-text" value="">Monatomic</button>
+      <br></br>
+      <button id="polyatomicTopicBtn" class="btn btnw waves-effect btn-large blue white-text" value="">Polyatomic</button>
+      <br></br>
+      <button id="versionTwoTopicBtn" class="btn btnw waves-effect btn-large blue white-text" value="">Type III</button>
+      <br></br>
+      <!-- <button id="summaryPageLoader" class="btn btnw waves-effect btn-large blue white-text" value="">Summary Page</button> -->
+    </div>
+  </div>
+</div>
+<!-- Page Two -->
+<!-- Navbar -->
+<div id="loadingPage" style="display: none;">
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light white-text">Ion Blaster</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <a id="backBtn" class="left"><i class="white-text material-icons" style="cursor: pointer;">replay</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Main  Div -->
+  <div class="container">
+    <a id="imageLink" data-lightbox="image-1" data-title="My caption" style="display: none;">
+      <img id="imageToTest" class="example-image" src="" alt="">
+    </a>
+    <div id="loader_section" class="section" style="display: block;">
+      <div class="col s12 m12">
+        <label for="progress">Loading...</label>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+    <div id="question_section" class="section" style="display: none;">
+      <label id="timer">Time Left: 0:00</label>
+      <div class="col s12 m12" id="card_holder">
+        <!-- Cards Start Here -->
+        <div class="card" id="displayMessage" style="display: none;">
+          <div class="card-content">
+            <p id="pointCounter" class="light right white-text"></p>
+            <p id="totalPoints" class="light white-text">Total Points: 100</p>
+            <center>
+              <span id="displayMessage_Message" class="card-title white-text">Correct!</span>
+              <p id="displayMessage_User_Selected" class="white-text">You selected</p>
+            </center>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <p id="currentQuestion" class="light right">0|100</p>
+            <p id="question" class="light">Identify the ion:</p>
+            <center>
+              <span id="ion" class="card-title">Ion<sub>1</sub><sup>2</sup></span>
+            </center>
+          </div>
+        </div>
+        <!-- Cards End Here -->
+      </div>
+      <center>
+        <div style="overflow: hidden;">
+          <!-- Answer Section Start Here -->
+          <button id="answer1" class="btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer2" class="btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer3" class="btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer4" class="btn waves-effect btn-large white blue-text"value="">Answer 1</button>
+          <br><br>
+          <!-- <button id="next" class="btnw btn waves-effect blue white-text">Next</button> -->
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+<!-- Page Two End -->
+<!-- Summary Score Page -->
+<!-- Navbar -->
+<div id="summaryPage" style="display: none;">
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light white-text">Ion Blaster</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <a id="backBtn1" class="left"><i class="white-text material-icons" style="cursor: pointer;">replay</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Main  Div -->
+  <div class="container">
+    <div id="loader_section_summaryPage" class="section" style="display: block;">
+      <div class="col s12 m12">
+        <label for="progress">Loading...</label>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h3 class="center light">Your scores</h3>
+      <h5 id="test_Type" class="light">Test Type:</h5>
+      <p id="questions_Right" class="">Total Right:</p>
+      <p id="num_Questions" class="">Total Questions:</p>
+      <p id="percentage_Questions" class="">Percentage</p>
+      <h5 class="center blue-text">Thank You!</h5>
+    </div>
+  </div>
+</div>
+<!-- Summary Score Page End -->
+<!--  Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/materialize.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+<script src="js/javascript.js"></script>
+<script src="lightboxFolder/js/lightbox.js"></script>
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+<script src="index.js"></script>
+</body>
+
+</html>

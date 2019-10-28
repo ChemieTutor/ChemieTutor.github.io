@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Quiz App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- ALWAYS USE 1120 x 700 IMAGE SIZE FILES -->
+  <!-- Navbar -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="homePage.html">Home Page</a></li>
+    <li><a href="classLessons.html">Class Lessons</a></li>
+    <li><a href="vocabulary.html">Vocabulary</a></li>
+    <li><a href="quizzes.html">Quizzes</a></li>
+    <li><a href="#!">Settings</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Log Out</a></li>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light blue-text">Quiz</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a class="dropdown-button blue-text" href="#!" data-activates="dropdown1">Menu<i class="blue-text medium material-icons left">menu</i></a>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><div class="userView">
+          <div class="background">
+            <img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="http://www.w3schools.com/w3css/img_avatar3.png"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <a class="subheader">Menu</a>
+        <div class="divider"></div>
+        <li><a href="homePage.html" class="light waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">web</i>Home Page</a></li>
+        <li><a href="classLessons.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">description</i>Class Lessons</a></li>
+        <li><a href="vocabulary.html" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">spellcheck</i>Vocabulary</a></li>
+        <li><a href="quizzes.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">question_answer</i>Quizzes</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">settings</i>Settings</a></li>
+        <li><a href="#!" class="waves-effect grey-text text-darken-1"><i class="grey-text text-darken-1 material-icons">input</i>Log Out</a></li>
+      </ul>
+      <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Parallax Starts -->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div id="content" class="center">
+          <h1 class="center white-text"><i class="large material-icons">question_answer</i></h1>
+          <h2 class="white-text" style="">Quiz</h2>
+          <h5 class="light white-text">Below is a variety of quizzes you can take to gain knowledge, or to practice your knowledge!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg" alt="Image 1"></div>
+  </div>
+  <!-- Parallax Ends -->
+  <!-- Main  Div -->
+  <div class="container">
+    <div class="section">
+      <h5 class="light">Select the type of quiz you would like to take below.</h5>
+      <br>
+      <h5 class="light">Topics:</h5>
+      <form>
+        <div class="input-field col s12">
+          <select id="topic">
+            <option value="" disabled selected>Select Topic</option>
+            <option value="1">General</option>
+            <option value="2">Elements</option>
+            <option value="3">Ions</option>
+            <option value="4">Unknown</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div>
+      <form>
+        <div class="input-field col s12">
+          <h5 class="light">Amount of Questions:</h5>
+          <select id="amount">
+            <option value="" disabled selected>Select Amount</option>
+            <option value="1">10</option>
+            <option value="2">20</option>
+            <option value="3">30</option>
+            <option value="4">Unknown</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div>
+      <form>
+        <div class="input-field col s12">
+          <h5 class="light">Type of Quiz:</h5>
+          <select id="type">
+            <option value="" disabled selected>Select Type</option>
+            <option value="1">Multiple Choice</option>
+            <option value="2">Interactive Multiple Choice</option>
+            <option value="3">Matching Memory</option>
+            <option value="4">Unknown</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <center><a id="startQuiz" class="btn waves-effect blue white-text">Start Quiz</a></center>
+    <br>
+
+  </div>
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="js/javascript.js"></script>
+  <script src="quizSection.js"></script>
+</body>
+
+</html>

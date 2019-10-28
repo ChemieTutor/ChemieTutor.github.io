@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Ion Blaster</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="http://cdn.rawgit.com/noelboss/featherlight/1.2.3/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+  <link href="lightboxFolder/css/lightbox.css" rel="stylesheet">
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  #values {
+    display: inline;
+  }
+  .btnw {
+    width: 100%;
+  }
+  #question_section {
+    display: none;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light white-text">Ion Blaster</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><div class="userView">
+          <div class="background">
+            <img src="http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fon-20796.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="http://www.w3schools.com/w3css/img_avatar3.png"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <a class="subheader">Menu</a>
+        <div class="divider"></div>
+        <li><a href="homePage.html" class="light waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">web</i>Home Page</a></li>
+        <li><a href="classLessons.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">description</i>Class Lessons</a></li>
+        <li><a href="vocabulary.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">spellcheck</i>Vocabulary</a></li>
+        <li><a href="quizzes.html" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">question_answer</i>Quizzes</a></li>
+        <li><a href="#!" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">settings</i>Settings</a></li>
+        <li><a href="#!" class="waves-effect blue-text text-darken-1"><i class="blue-text text-darken-1 material-icons">input</i>Log Out</a></li>
+      </ul>
+      <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Main  Div -->
+  <div class="container">
+    <a id="imageLink" data-lightbox="image-1" data-title="My caption" style="display: none;">
+      <img id="imageToTest" class="example-image" src="" alt="">
+    </a>
+    <div id="loader_section" class="section">
+      <div class="col s12 m12">
+        <label for="progress">Loading...</label>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+    <div id="question_section" class="section">
+      <center><label id="totalScore">Current Score:</label></center>
+      <label id="timer" for="progress">Time Left: 0:00</label>
+      <label id="percent_counter" for="progress" class="right">100%</label>
+      <div class="progress">
+        <div id="progressBarer" class="determinate" style="width: 100%"></div>
+      </div>
+      <div class="col s12 m12" id="card_holder">
+        <!-- Cards Start Here -->
+        <div class="card">
+          <div class="card-content">
+            <p id="currentQuestion" class="light right">0|100</p>
+            <p id="question" class="light">Identify the ion:</p>
+            <center>
+              <span id="ion" class="card-title">Ion<sub>1</sub><sup>2</sup></span>
+            </center>
+          </div>
+        </div>
+        <!-- Cards End Here -->
+        <div>
+          <!-- Answer Section Start Here -->
+          <button id="answer1" class="btnw btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer2" class="btnw btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer3" class="btnw btn waves-effect btn-large white blue-text" value="">Answer 1</button>
+          <br><br>
+          <button id="answer4" class="btnw btn waves-effect btn-large white blue-text"value="">Answer 1</button>
+          <br><br>
+          <!-- <button id="next" class="btnw btn waves-effect blue white-text">Next</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCP4QgmVwNhL7H9YkpXosSjgjRhw3GyaLA",
+    authDomain: "qadata-6c30d.firebaseapp.com",
+    databaseURL: "https://qadata-6c30d.firebaseio.com",
+    storageBucket: "qadata-6c30d.appspot.com",
+    messagingSenderId: "591410256857"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="js/javascript.js"></script>
+  <script src="lightboxFolder/js/lightbox.js"></script>
+  <!--<script src="http://cdn.rawgit.com/noelboss/featherlight/1.2.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+  <script src="quizSection2.js"></script>
+</body>
+
+</html>

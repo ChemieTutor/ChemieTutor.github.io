@@ -1,0 +1,535 @@
+/* set the default background, text color, font, page width, etc... */
+body{
+background: #FFF;
+color: black;
+width: 875px;
+font-family: "Times New Roman", Times, serif;
+font-style: normal;
+font-size: 16px;
+text-align: left;
+border-width: 0;
+padding: 0;
+margin: 8px;
+}
+
+
+/* by default, divisions, paragraphs and list items have no borders, padding or margins */
+div, p, li{
+border-width: 0;
+padding: 0;
+margin: 0;
+}
+
+
+/* main page headers, replacing graphical headers */
+/* Note that Oswald is a web font fron Google: https://fonts.google.com/ */
+h1.maintitle{
+color: black;
+font-family: 'Oswald', sans-serif;
+font-style: normal;
+font-size: 32px;
+text-align: center;
+border-width: 0;
+padding: 0;
+margin: 25px 0 20px;
+}
+
+/* temporary division to get older pages centered with the wide headers */
+div.quickfix{
+width: 640px;
+margin: 0 auto;
+}
+
+/* set colors for the links */
+a:link {color: #00F;}
+a:hover {color: #66F;}
+a:visited {color: #000;}
+a:visited:hover {color: #66F;}
+
+
+/* set colors for external links */
+a:link.external {color: #393}
+a:link:hover.external {color: #3D3}
+a:visited.external {color: #999}
+a:visited:hover.external {color: #3D3}
+
+
+/* gets rid of borders around linked images */
+a:link img, a:visited img {border: 0;}
+
+/* center title graphics */
+
+#titleimg{
+margin: 25px 0 20px;
+}
+
+#titleimg img{
+display: block;
+margin: 0 auto;
+}
+
+
+/* center generic images */
+p.img{
+text-align: center;
+text-indent: 0;
+border: 0;
+margin: 20px 0;
+}
+
+
+/* captions for images */
+p.caption{
+margin: -15px auto 20px;
+font-family: arial, sans-serif;
+font-size: 12px;
+text-align: center;
+width: 50%;
+}
+
+
+
+/* text title that appears under the title graphic */
+/* this is usually within an H1 tag */
+/* typical use is for the welcome line on game index pages, title lines on FAQ pages, etc... */
+#subtitle{
+font-size: 22px;
+text-align: center;
+margin: 20px 0 15px;
+}
+
+/* typically within an h2 tag */
+#subsubtitle{
+font-size: 20px;
+text-align: center;
+margin: 20px 0 15px;
+}
+
+
+
+/* top and bottom navigation text bars, as seen in qa and workbench */
+
+p.topnavigation, p.bottomnavigation{
+text-align: center;
+font-family: arial, sans-serif;
+font-size: 12px;
+}
+
+p.bottomnavigation{
+margin: 30px 0 0;
+}
+
+p.topnavigation a, p.bottomnavigation a{
+text-decoration: none;
+}
+
+p.topnavigation a:link, p.bottomnavigation a:link {color: #00F;}
+p.topnavigation a:visited, p.bottomnavigation a:visited {color: #000;}
+p.topnavigation a:hover, p.bottomnavigation a:hover {color: #66F;}
+p.topnavigation a:visited:hover, p.bottomnavigation a:visited:hover {color: #66F;}
+
+
+/* position and space graphical navigation buttons, as seen in frost, reading, crossword */
+
+#graphicalnav{
+text-align: center;
+}
+
+#graphicalnav img{
+padding: 5px 5px 0;
+}
+
+
+
+/* error messages */
+
+#error{
+width: 80%;
+border-color: #000;
+border-width: 5px;
+border-style: double;
+background-color: #FFC;
+padding: 0;
+margin: 50px auto 300px;
+font-size: 24px;
+}
+
+#error p{
+margin: 20px;
+text-indent: 20px;
+}
+
+#error p.err{
+text-indent: 0;
+text-align: center;
+font-weight: bold;
+}
+
+
+
+
+
+/* generic text */
+p.txt, p.hanging, p.noindent{
+text-align: left;
+margin: 12px 30px;
+text-indent: 12px;
+}
+
+/* generic centered text */
+p.center{
+text-align: center;
+margin: 12px 0;
+text-indent: 0;
+}
+
+
+/* generic centered, one-line example */
+p.ex{
+font-family: arial, sans-serif;
+font-size: 14px;
+text-align: center;
+margin: 25px 0;
+text-indent: 0;
+}
+
+/* no indent */
+p.noindent{
+text-indent: 0px;
+}
+
+
+/* extra indents */
+p.indent20{
+text-indent: 20px;
+}
+
+
+/*no top or bottom margins */
+p.notop{
+margin-top: 0;
+}
+
+p.nobottom{
+margin-bottom: 0;
+}
+
+/* hanging indent */
+
+p.hanging{
+text-indent: -22px;
+margin: 12px 10px 12px 44px;
+}
+
+
+/* underlined */
+
+.underline{
+text-decoration: underline;
+font-style: italic;
+}
+
+
+/* no breaking on whitespace */
+.nobreak{
+white-space: nowrap;
+}
+
+
+/* paragraph types and headers/titles for 'structured' pages like FAQ pages */
+
+p.topic, p.subtopic, p.subsubtopic,
+p.ques, p.step, p.substep{
+font-family: arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+margin: 40px 10px 0 40px;
+}
+
+p.subtopic, p.step{
+font-size: 15px;
+margin: 25px 10px 0 55px;
+}
+
+p.subsubtopic, p.substep{
+font-size: 14px;
+margin: 15px 10px 0 65px;
+}
+
+p.topictxt, p.topictxti{
+margin: 10px 40px 10px 70px;
+}
+
+p.topicsubtxt, p.topicsubtxti{
+margin: 10px 40px 10px 90px;
+}
+
+p.topictxti, p.topicsubtxti{
+text-indent: 12px;
+}
+
+p.exampleaddress{
+font-family: monaco, sans-serif;
+font-size: 16px;
+margin: 20px 0;
+text-align: center;
+}
+
+
+/* list of links, mainly for listing FAQ questions/topics */
+
+p.faqlist{
+font-family: arial, sans-serif;
+font-size: 16px;
+padding: 8px 50px;
+}
+
+p.faqlist a{
+text-decoration: none;
+}
+
+
+
+/* generic 'strong' text */
+
+.yell, .yell a, .yell a:visited{
+color: red;
+font-weight: bold;
+}
+
+.yell a:hover, .yell a:visited:hover{
+color: #F66;
+}
+
+
+/* generic faded text */
+.fade{ color: #ccc; }
+
+
+/* generic lists with bullets, as seen on the beams info page */
+
+ul.bulletlist{
+margin: 20px 80px 20px 25px;
+list-style-type: disc;
+}
+
+ul.bulletlist li{
+margin: 8px 0;
+}
+
+
+/* generic contact information/addresses, as seen on the beams info page */
+
+p.contact, p.contactbold{
+text-align: center;
+font-family: arial, sans-serif;
+font-size: 15px;
+margin: 0 0 2px;
+}
+
+p.contactbold{
+font-weight: bold;
+margin: 30px 0 10px;
+}
+
+
+/* program information and application section header, as seen in pcedinfo */
+
+p.blueheader{
+font-family: arial, sans-serif;
+font-size: 16px;
+color: #006;
+font-weight: bold;
+text-align: center;
+margin: 15px 0 5px;
+}
+
+
+/* program information and application section text, as seen in pcedinfo */
+
+p.boxtxt{
+margin: 5px 80px 30px;
+}
+
+
+/* add a black border */
+
+.blackborder1{
+ border: 1px;
+ border-style: solid;
+ border-color: black;
+}
+
+/* header and main navigation bar styles */
+
+#head{
+position: relative;
+top: 0; left: 0;
+height: 95px;
+}
+
+
+#head p.scied{
+position: absolute;
+top: 28px; right: 0;
+font-size: 18px;
+font-family: arial, sans-serif;
+font-weight: bold;
+}
+
+
+#head p.sec{
+position: absolute;
+top: 0; right: 0;
+font-family: arial, sans-serif;
+font-size: 10px;
+}
+
+#head .sec a {text-decoration: none;}
+#head .sec a:link, #head .sec a:visited {color: #AAA;}
+#head .sec a:link:hover, #head .sec a:visited:hover {color: #66F;}
+
+
+/* position header graphics */
+
+#jl_main{
+position: absolute;
+top: 0; left: 0;
+}
+
+#jl_bar{
+position: absolute;
+top: 46px; left: 259px;
+}
+
+#ed_bar{
+position: absolute;
+top: 52px; left: 0;
+}
+
+img.topnav{
+background-image: url(/g/top-nav-sprite.png);
+}
+
+
+#jl_c{
+position: absolute;
+top: 33px; left: 139px;
+background-position: -452px 0px;
+}
+
+
+#jl_c:hover{
+background-position: -452px -20px;
+}
+
+#jl_h{
+position: absolute;
+top: 33px; left: 0;
+background-position: -385px 0px;
+}
+
+#jl_h:hover{
+background-position: -385px -20px;
+}
+
+
+#jl_s{
+position: absolute;
+top: 33px; left: 66px;
+background-position: -385px -40px;
+}
+
+#jl_s:hover{
+background-position: -385px -60px;
+}
+
+#ed_h{
+position: absolute;
+top: 52px; left: 487px;
+background-position: 0px 0px;
+}
+
+#ed_h:hover{
+background-position: 0px -44px;
+}
+
+#ed_t{
+position: absolute;
+top: 52px; left: 542px;
+background-position: -56px 0px;
+}
+
+#ed_t:hover{
+background-position: -56px -44px;
+}
+
+#ed_s{
+position: absolute;
+top: 52px; left: 600px;
+background-position: -115px 0px;
+}
+
+#ed_s:hover{
+background-position: -115px -44px;
+}
+
+#ed_g{
+position: absolute;
+top: 52px; left: 647px;
+background-position: -163px 0px;
+}
+
+#ed_g:hover{
+background-position: -163px -44px;
+}
+
+#ed_v{
+position: absolute;
+top: 52px; left: 699px;
+background-position: -216px 0px;
+}
+
+#ed_v:hover{
+background-position: -216px -44px;
+}
+
+#ed_p{
+position: absolute;
+top: 52px; left: 755px;
+background-position: -273px 0px;
+}
+
+#ed_p:hover{
+background-position: -273px -44px;
+}
+
+#ed_r{
+position: absolute;
+top: 52px; left: 810px;
+background-position: -329px 0px;
+}
+
+#ed_r:hover{
+background-position: -329px -44px;
+}
+
+
+
+
+/* footer styles */
+
+#foot{
+background-color: #CF9;
+font-family: arial, sans-serif;
+font-size: 10px;
+padding: 4px 10px;
+margin: 40px 0 0;
+position: relative;
+top: 0; left: 0;
+}
+
+#foot p.cite{
+position: absolute;
+top: 4px; right: 10px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Ion Blaster</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+  body {
+    background-color: #f5f5f5;
+  }
+  #section {
+    display:inline-block;
+    font-size: 16px;
+    color: #9e9e9e;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo center light white-text">Ion Blaster</a>
+      <a id="logo-container" href="#" class="brand-logo"></a>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+  <!-- Main  Div -->
+  <div class="container">
+    <div class="section">
+      <div class="col s12 m12" id="card_holder">
+        <!-- Cards Start Here -->
+        <div class="card">
+          <div class="card-content">
+            <p id="question" class="light">Identify the ion:</p>
+            <center>
+              <span id="ion" class="card-title">Ion</span>
+            </center>
+          </div>
+        </div>
+        <!-- Cards End Here -->
+      </div>
+    </div>
+  </div>
+  <div id="answer_div">
+
+  </div>
+  <!--  Scripts-->
+  <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="bcb_data.js"></script>
+  <script src="app.js" async></script>
+  <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
